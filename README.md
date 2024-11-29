@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Astro Starter Kit: Basics
 
 ```sh
@@ -46,3 +47,7 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+=======
+# primer-astro-tailwind
+Primer proyecto usando Astro 5.0 y Tailwind
+>>>>>>> d743921034a24a14e21057e618a76b7fb4db6810
