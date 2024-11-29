@@ -1,7 +1,7 @@
 ---
 import MenuIcon from "./MenuIcon.astro"
 
-const pageLogo = "/public/web-logo.webp"
+const pageLogo = "/web-logo.webp"
 ---
 
 <header class="
@@ -10,7 +10,7 @@ flex justify-between items-center
 ">
     <img class="object-contain h-full hover:saturate-200" src={pageLogo} alt="" />
     <h1 class="text-3xl font-semibold">Proyecto Web Responsive 01</h1>
-    <MenuIcon client:load/>
+    <MenuIcon />
 </header>
 
 <style>
