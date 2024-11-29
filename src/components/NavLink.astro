@@ -1,0 +1,25 @@
+---
+const {imgSrc, imgAlt, link, linkContent, id} = Astro.props
+---
+
+<a id={id}
+class="
+    nav-links
+    py-4 px-8 rounded-lg w-full relative z-10 overflow-hidden
+    flex items-center gap-8
+" 
+    href={link}>
+    <img class="aspect-square w-[1.2em]" src={imgSrc} alt={imgAlt} />
+    {linkContent}
+</a>
+<style>
+    .nav-links::before {
+        content: "";
+        @apply opacity-0 -z-10 absolute top-0 right-full w-full h-full bg-blue-900
+        transition-all duration-300;
+    }
+
+    .nav-links:not(:active):hover::before {
+        @apply opacity-100 translate-x-full;
+}                
+</style>

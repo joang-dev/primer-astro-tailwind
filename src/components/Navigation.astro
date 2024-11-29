@@ -1,0 +1,45 @@
+---
+import RegButtons from "./RegButtons.astro"
+import NavLink from "./NavLink.astro"
+
+const iconsPath = "/public/icons/"
+const iconsExtension = ".svg"
+const iconsFile = [
+    "home",
+    "team",
+    "contact"
+]
+
+const srcIcons = iconsFile.map((icon) => (
+    `${iconsPath}${icon}${iconsExtension}`
+))
+function capitalizeFirstLetter (string: string) {
+    return string.charAt(0).toUpperCase() + string.slice(1)
+}
+---
+
+<nav class="
+text-white bg-slate-900 overflow-hidden py-6 font-extralight
+flex flex-col justify-between items-center
+">
+    <ul class="flex flex-col gap-8 w-full">
+        {
+            srcIcons.map((icon, i) => (
+                <li>
+                    <NavLink
+                    imgSrc={icon}
+                    imgAlt={`Icono de ${iconsFile[i]}`}
+                    link="#"
+                    linkContent={capitalizeFirstLetter(iconsFile[i])}/>
+                </li>
+            ))
+        }
+    </ul>
+    <RegButtons />
+</nav>
+
+<style>
+    nav {
+        grid-area: nav;
+    }
+</style>
