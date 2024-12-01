@@ -18,11 +18,13 @@ function capitalizeFirstLetter (string: string) {
 }
 ---
 
-<nav class="
-text-white bg-slate-900 overflow-hidden py-6 font-extralight
-flex flex-col justify-between items-center
-">
-    <ul class="flex flex-col gap-8 w-full">
+<nav class={`
+text-white bg-slate-900 md:py-6 font-extralight overflow-hidden
+sticky top-0
+flex md:flex-col md:justify-between justify-between items-center
+`
+}>
+    <ul class="flex flex-col overflow-hidden gap-8 w-full">
         {
             srcIcons.map((icon, i) => (
                 <li>

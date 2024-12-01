@@ -23,17 +23,36 @@ const { title } = Astro.props;
 
 <style>
 	body {
-	display: grid;
-    grid-template-columns: 1fr 0;
-    grid-template-rows: min-content 1fr;
-    grid-template-areas:
-        "header header"
-        "main nav"
-    ;
-	transition: grid-template-columns .4s ease, grid-template-rows .4s ease;
+		display: grid;
+		grid-template-columns: 1fr 0;
+		grid-template-rows: min-content 1fr;
+		grid-template-areas:
+			"header header"
+			"main nav"
+		;
+		transition: all .4s ease;
 	}
 
 	body.show-menu {
 		grid-template-columns: 1fr 15rem;
+	}
+
+	@media (width < 48rem) {
+		body {
+			/* background-color: red; */
+
+			grid-template-columns: 1fr;
+			grid-template-rows: min-content 0 1fr;
+			grid-template-areas:
+				"header"
+				"nav"
+				"main"
+			;
+	}
+
+	body.show-menu {
+		grid-template-columns: 1fr;
+		grid-template-rows: min-content 20rem 1fr;
+	}
 	}
 </style>
