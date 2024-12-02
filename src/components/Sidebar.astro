@@ -1,8 +1,8 @@
 ---
-
+const {bgColor} = Astro.props
 ---
 
-<aside class="bg-orange-500 sticky top-20 flex items-center justify-center">
+<aside class={`${bgColor} sticky top-20 flex items-center justify-center`}>
     <h3 class="text-center text-semibold text-3xl">Esto es un sidebar</h3>
 </aside>
 

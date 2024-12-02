@@ -1,0 +1,17 @@
+---
+let numberOfParagraph = []
+for (let i = 0; i <= 20; i++) {
+    numberOfParagraph.push(i.toString())
+}
+---
+
+<section>
+    <h2 class="text-3xl font-semibold text-center mb-5">¿Qué es el <span>Proyecto Web Responsive 01</span>?</h2>
+    <div>
+        {numberOfParagraph.map ((num) => (
+            <p>
+                {num}: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, in vel! Corporis officiis libero harum ut quae ipsa, ad praesentium.
+            </p>
+        ))}
+    </div>
+</section>

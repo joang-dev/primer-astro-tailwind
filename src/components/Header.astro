@@ -2,13 +2,16 @@
 import MenuIcon from "./MenuIcon.astro"
 
 const pageLogo = "/web-logo.webp"
+const {flexReverse} = Astro.props
 ---
 
-<header class="px-3 md:px-10 h-20 bg-blue-900 text-gray-50 sticky top-0
-flex justify-between items-center
-">
-    <img class="aspect-auto w-16 md:w-20 hover:saturate-200" src={pageLogo} alt="" />
-    <h1 class="text-xl md:text-3xl font-semibold">Proyecto Web Responsive 01</h1>
+<header class=`px-3 md:px-10 h-20 bg-blue-900 text-gray-50 sticky top-0
+flex ${flexReverse} justify-between items-center
+`>
+    <a href="/">
+        <img class="aspect-auto w-16 md:w-20 hover:saturate-200" src={pageLogo} alt="" />
+    </a>
+    <h1 class="text-pretty px-3 text-xl text-center md:text-3xl font-semibold">Proyecto Web Responsive 01</h1>
     <MenuIcon />
 </header>
 
