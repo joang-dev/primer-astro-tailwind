@@ -9,6 +9,11 @@ const iconsFile = [
     "team",
     "contact"
 ]
+const links = [
+    "/",
+    "/team",
+    "/contact"
+]
 
 const srcIcons = iconsFile.map((icon) => (
     `${iconsPath}${icon}${iconsExtension}`
@@ -19,8 +24,7 @@ function capitalizeFirstLetter (string: string) {
 ---
 
 <nav class={`
-text-white bg-slate-900 md:py-6 font-extralight overflow-hidden
-sticky top-0
+text-white bg-slate-900 md:py-6 font-extralight overflow-hidden sticky top-20
 flex md:flex-col md:justify-between justify-between items-center
 `
 }>
@@ -31,7 +35,7 @@ flex md:flex-col md:justify-between justify-between items-center
                     <NavLink
                     imgSrc={icon}
                     imgAlt={`Icono de ${iconsFile[i]}`}
-                    link="#"
+                    link={links[i]}
                     linkContent={capitalizeFirstLetter(iconsFile[i])}/>
                 </li>
             ))
@@ -43,5 +47,6 @@ flex md:flex-col md:justify-between justify-between items-center
 <style>
     nav {
         grid-area: nav;
+        max-height: calc(100dvh - 80px);
     }
 </style>

@@ -17,3 +17,11 @@ flex justify-between items-center
         grid-area: header;
     }
 </style>
+
+<script>
+    const menuIcon = document.getElementById('menu-icon')
+    menuIcon?.addEventListener('click', toggleMenu)
+    function toggleMenu () {
+        document.body.classList.toggle('show-menu')
+}
+</script>
